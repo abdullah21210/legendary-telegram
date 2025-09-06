@@ -1,0 +1,78 @@
+/* Import Cairo font for Arabic text */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&display=swap');
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Cairo', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  direction: rtl;
+  text-align: right;
+}
+
+#root {
+  margin: auto;
+  min-height: 100vh;
+}
+
+/* RTL support for Material-UI components */
+.MuiDrawer-paper {
+  right: 0 !important;
+  left: auto !important;
+}
+
+.MuiAppBar-root {
+  right: 0 !important;
+  left: auto !important;
+}
+
+/* Custom scrollbar for RTL */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Ensure proper text alignment for Arabic */
+.MuiTypography-root {
+  text-align: inherit;
+}
+
+/* Fix for table alignment in RTL */
+.MuiTableCell-root {
+  text-align: right;
+}
+
+.MuiTableCell-head {
+  font-weight: 600;
+}
+
+/* Custom styles for charts */
+.MuiChartsAxis-root text {
+  font-family: 'Cairo', sans-serif;
+}
+
+.MuiChartsLegend-root text {
+  font-family: 'Cairo', sans-serif;
+}
